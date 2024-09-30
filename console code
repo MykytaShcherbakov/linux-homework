@@ -1,0 +1,31 @@
+
+[ec2-user@ip-172-31-33-20 130824_morning]$ cd Mykyta_Shcherbakov/
+[ec2-user@ip-172-31-33-20 Mykyta_Shcherbakov]$ ls
+script_date30_09_24.sh  test.txt
+[ec2-user@ip-172-31-33-20 Mykyta_Shcherbakov]$ vim myfirstbashscript.sh
+[ec2-user@ip-172-31-33-20 Mykyta_Shcherbakov]$ ls
+myfirstbashscript.sh  script_date30_09_24.sh  test.txt
+[ec2-user@ip-172-31-33-20 Mykyta_Shcherbakov]$ vim myfirstbashscript.sh
+[ec2-user@ip-172-31-33-20 Mykyta_Shcherbakov]$ chmod +x myfirstbashscript.sh
+[ec2-user@ip-172-31-33-20 Mykyta_Shcherbakov]$ ./myfirstbashscript.sh
+Mon Sep 30 14:21:10 UTC 2024
+Hello, ec2-user!
+/opt/130824_morning/Mykyta_Shcherbakov
+./myfirstbashscript.sh: line 5: aux: command not found
+0
+0
+ls: cannot access /ect/passwd: No such file or directory
+[ec2-user@ip-172-31-33-20 Mykyta_Shcherbakov]$
+
+
+
+// и вот что я вводил в файле//
+
+  1 #!/bin/bash
+  2 date
+  3 echo "Hello, $USER!"
+  4 pwd
+  5 aux --no-headers | wc -l
+  6 ps aux | grep '[b]ioset' | wc -l
+  7 ls -l /ect/passwd | awk '{print $1}'
+
